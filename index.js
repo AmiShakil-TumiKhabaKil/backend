@@ -28,6 +28,9 @@ mongoose.connect(
 );
 
 app.use("/", user);
+app.get("/", (req, res)=>{
+res.send("server in running")
+})
 
 //listening by port
 app.listen(PORT, () => {
